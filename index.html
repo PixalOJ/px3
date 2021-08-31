@@ -1,129 +1,632 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Material Design for Bootstrap</title>
-    <!-- MDB icon -->
-    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
-    <!-- Google Fonts Roboto -->
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
-    />
-    <!-- MDB -->
-    <link rel="stylesheet" href="css/mdb.min.css" />
-    <!-- Custom styles -->
-    <style></style>
-  </head>
+<html lang="cn">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <title>首页 - PixalOJ</title>
+        <!-- MDB icon -->
+        <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+        <!-- Font Awesome -->
+        <link
+        rel="stylesheet"
+        href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+        />
+        <!-- Google Fonts Roboto -->
+        <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+        />
+        <!-- Dark MDB theme -->
+        <link rel="stylesheet" href="css/mdb.min.css" />
+        <!-- Regular MDB theme -->
+        <!-- <link rel="stylesheet" href="css/mdb.min.css" /> -->
+        <link rel="stylesheet" href="css/style.css" />
+        
+        
+        
+    </head>
+    <body>
+        <header>
+            <!-- Intro settings -->
+            <style>
+                #intro {
+                    /* Margin to fix overlapping fixed navbar */
+                    margin-top: 58px;
+                }
+                @media (max-width: 991px) {
+                    #intro {
+                        /* Margin to fix overlapping fixed navbar */
+                        margin-top: 45px;
+                    }
+                }
+            </style>
+            
+            
+            <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+                <!-- Container wrapper -->
+                <div class="container-fluid">
+                    <!-- Navbar brand -->
+                    <a class="navbar-brand" href="/index.html">PixalOJ</a>
+                    
+                    <!-- Toggle button -->
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-mdb-toggle="collapse"
+                        data-mdb-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                        >
+                        <span class="navbar-toggler-icon"></span>
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    
+                    <!-- Collapsible wrapper -->
+                    <div
+                        class="collapse navbar-collapse"
+                        id="navbarSupportedContent"
+                        >
+                        <!-- Left links -->
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="/index.html"
+                                    >首页</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/px2/problems.html">题库</a>
+                            </li>
+                            <!-- Navbar dropdown -->
+                            <li class="nav-item dropdown">
+                                <a
+                                    class="nav-link dropdown-toggle"
+                                    href="#"
+                                    id="navbarDropdown"
+                                    role="button"
+                                    data-mdb-toggle="dropdown"
+                                    aria-expanded="false"
+                                    >
+                                    社区
+                                </a>
+                                <!-- Dropdown menu -->
+                                <ul
+                                    class="dropdown-menu"
+                                    aria-labelledby="navbarDropdown"
+                                    >
+                                    <li><a class="dropdown-item" href="https://github.com/PixalOJ/px2/discussions">讨论</a></li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">题解</a>
+                                    </li>
+                                    <li>
+                                        <hr class="dropdown-divider" />
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#"
+                                            >反馈/建议</a
+                                        >
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link disabled"
+                                    href="#"
+                                    tabindex="-1"
+                                    aria-disabled="true"
+                                    >比赛（不可用）</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link disabled"
+                                    href="#"
+                                    tabindex="-1"
+                                    aria-disabled="true"
+                                    >团队（不可用）</a
+                                >
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a
+                                    class="nav-link dropdown-toggle"
+                                    href="#"
+                                    id="navbarDropdown"
+                                    role="button"
+                                    data-mdb-toggle="dropdown"
+                                    aria-expanded="false"
+                                    >
+                                    博客
+                                </a>
+                                <!-- Dropdown menu -->
+                                <ul
+                                    class="dropdown-menu"
+                                    aria-labelledby="navbarDropdown"
+                                    >
+                                        <a class="dropdown-item" href="/px2/blogcenter.html">博客中心</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="https://pixaloj.github.io/PixalBlog">Pixal
+                                            OJ官方博客</a>
+                                    </li>
+                                    <li>
+                                        <hr class="dropdown-divider" />
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="https://pixaloj.github.io/px2/blogsign.html"
+                                            >我要登记</a
+                                        >
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <!-- Notification dropdown -->
+                        <li class="nav-item">
+                            <div class="form-check form-switch">
+                                <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="flexSwitchCheckChecked"
+                                checked=""
+                                onclick="switchdarkmode()"
+                                />
+                                <label class="form-check-label" for="flexSwitchCheckChecked"
+                                    ><font color="black">Dark Mode!</font></label
+                                >
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            
+                            <a
+                                class="nav-link dropdown-toggle hidden-arrow"
+                                href="#"
+                                id="navbarDropdownMenuLink"
+                                role="button"
+                                data-mdb-toggle="dropdown"
+                                aria-expanded="false"
+                                >
+                                <i class="fas fa-bell"></i>
+                                <span
+                                    class="badge rounded-pill badge-notification bg-danger"
+                                    >3</span
+                                >
+                            </a>
+                            
+                            <ul
+                                class="dropdown-menu dropdown-menu-end"
+                                aria-labelledby="navbarDropdownMenuLink"
+                                >
+                                
+                                <li><a class="dropdown-item" href="#">来自开发组的一封信</a></li>
+                                <li>
+                                    <a class="dropdown-item" href="#">来自管理组的一封信</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#"
+                                        >欢迎加入Pixal OJ 大家庭！</a
+                                    >
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- Notification dropdown -->
+                        <!-- Left links -->
+                        <!-- Search form -->
+                        <form class="d-flex input-group w-auto">
+                            <input
+                            type="search"
+                            class="form-control"
+                            placeholder="查找什么..."
+                            aria-label="Search"
+                            />
+                            <button
+                                class="btn btn-outline-primary"
+                                type="button"
+                                data-mdb-ripple-color="dark"
+                                >
+                                搜索
+                            </button>
+                        </form>
+                    </div>
+                    <!-- Collapsible wrapper -->
+                </div>
+                <!-- Container wrapper -->
+            </nav>
+            <!-- Navbar -->
+            
+            
+            
+            <br>
+            <br>
+            <!-- Start your project here-->
+            
+            
+                
+                <!-- Section: Components -->
+                <div id="intro" class="p-5 text-center bg-grey">
+                        
+                            <h1><strong>欢迎来到Pixal OJ</strong></h1>
+                 </div>
+        </header>
+        <main class="my-5">
+        <div class="container">
+                    <hr class="my-5" />
+                    <!--Section: Carousel-->
+                    
+                    
+                    
+                    
+                    <div class="row">
+                        <div class="col-md-8 mb-4">
+                            <section>
+                                
+                                <!-- Carousel wrapper -->
+                                <div
+                                    id="carouselExampleCaptions"
+                                    class="carousel slide carousel-fade shadow-3-strong"
+                                    data-mdb-ride="carousel"
+                                    >
+                                    <!-- Indicators -->
+                                    <ol class="carousel-indicators">
+                                        <li
+                                            data-mdb-target="#carouselExampleCaptions"
+                                            data-mdb-slide-to="0"
+                                            class=""
+                                            ></li>
+                                        <li
+                                            data-mdb-target="#carouselExampleCaptions"
+                                            data-mdb-slide-to="1"
+                                            class=""
+                                            ></li>
+                                        <li
+                                            data-mdb-target="#carouselExampleCaptions"
+                                            data-mdb-slide-to="2"
+                                            class="active"
+                                            aria-current="true"
+                                            ></li>
+                                    </ol>
+                                    
+                                    <!-- Inner -->
+                                    <div class="carousel-inner">
+                                        <!-- Single item -->
+                                        <div class="carousel-item">
+                                            <img
+                                            src="https://mdbootstrap.com/img/Photos/Slides/img%20(15).jpg"
+                                            class="d-block w-100"
+                                            alt="..."
+                                            />
+                                            <div class="carousel-caption d-none d-md-block">
+                                                <h5>关于Pixal OJ</h5>
+                                                <p>
+                                                Pixal OJ 由 lijunhao2023 搭建，旨在提供优质的题目，快捷的服务。
+                                                </p>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Single item -->
+                                        <div class="carousel-item">
+                                            <img
+                                            src="https://mdbootstrap.com/img/Photos/Slides/img%20(22).jpg"
+                                            class="d-block w-100"
+                                            alt="..."
+                                            />
+                                            <div class="carousel-caption d-none d-md-block">
+                                                <h5>Pixal Cloud（巴蜀文件云）</h5>
+                                                <p>
+                                                在云端安全、永久地储存你的文件。
+                                                </p>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Single item -->
+                                        <div class="carousel-item active">
+                                            <img
+                                            src="https://mdbootstrap.com/img/Photos/Slides/img%20(23).jpg"
+                                            class="d-block w-100"
+                                            alt="..."
+                                            />
+                                            <div class="carousel-caption d-none d-md-block">
+                                                <h5>我们使用Material Design</h5>
+                                                <p>
+                                                让网站变得生动、丝滑。
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Inner -->
+                                    
+                                    <!-- Controls -->
+                                    <a
+                                        class="carousel-control-prev"
+                                        href="#carouselExampleCaptions"
+                                        role="button"
+                                        data-mdb-slide="prev"
+                                        >
+                                        <span
+                                            class="carousel-control-prev-icon"
+                                            aria-hidden="true"
+                                            ></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </a>
+                                    <a
+                                        class="carousel-control-next"
+                                        href="#carouselExampleCaptions"
+                                        role="button"
+                                        data-mdb-slide="next"
+                                        >
+                                        <span
+                                            class="carousel-control-next-icon"
+                                            aria-hidden="true"
+                                            ></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </a>
+                                </div>
+                                <!-- Carousel wrapper -->
+                            </section>
+                            <!--Section: Carousel-->
+                        </div>
+                        
+                        <div class="col-md-4 mb-4">
+                            <!--Section: Summary-->
+                            <section>
+                                
+                                <div class="card">
+                                    <div class="card-header bg-white text-center py-3">
+                                        <h5 class="mb-0 fw-bold">公告栏</h5>
+                                    </div>
+                                    
+                                    <div class="card-body">
+                                        <ul>
+                                            <li>题库已经初始化了</li>
+                                            <li><strong>短期目标: </strong>搭建index</li>
+                                            <li><strong>中期目标: </strong>添加题目</li>
+                                            <li><strong>远景规划: </strong>建设Pixal Cloud</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div
+                                        class="card-footer bg-white d-flex justify-content-between py-3"
+                                        >
+                                        <strong>日访问量</strong>
+                                        <strong><div class="spinner-border text-primary mx-2" role="status">
+                                            <span class="visually-hidden">Loading...</span>
+                                          </div></strong>
+                                    </div>
+                                </div>
+                            </section>
+                            <!--Section: Summary-->
+                        </div>
+                    </div>
+                </section>
+                <!--Section: forms-->
+                
+                <hr class="my-5" />
+                
+                <section>
+                  <div class="text-center">
+                    <h4><strong>博客精选</strong></h4>
+                    <a
+                      class="btn btn-primary mb-5"
+                      href="https://pixaloj.github.io/px2/blogcenter.html"
+                      role="button"
+                      >查看所有博客</a
+                    >
+                  </div>
 
-  <body>
-    <!-- prettier-ignore -->
-    <div class="container">
-    <div style="text-align: center; margin-top: 150px">
-      <img src="https://mdbootstrap.com/img/logo/mdb-transparent-250px.png" style="width: 250px; height: 90px;" />
-      <h2 class="mt-5 pb-3">Welcome to Fluent UI Demo Free App</h2>
+                  <!--Grid row-->
+                  <div class="row">
+                    <!--Grid column-->
+                    <div class="col-lg-4 col-md-12 mb-4">
+                      <div class="card mb-4">
+                        <div class="card-body">
+                          <h5 class="card-title">PixalOJ版本号解释</h5>
+                          <p class="card-text">
+                            解释PixalOJ版本的命名规则。
+                          </p>
+                          <a href="https://lijunhao2023.blog.luogu.org/PixalOJ-version-explain"><button type="button" class="btn btn-primary">
+                            进一步了解
+                          </button>
+                              </a>
+                        </div>
+                      </div>
 
-      <h3 class="my-4">Components</h3>
+                      <div class="card bg-dark text-white shadow-1-strong">
+                        <img
+                          src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(55).jpg"
+                          class="card-img"
+                          alt="..."
+                        />
+                        <div class="card-img-overlay">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">
+                            This is a wider card with supporting text below as a
+                            natural lead-in to additional content. This content is a
+                            little bit longer.
+                          </p>
+                          <p class="card-text">Last updated 3 mins ago</p>
+                        </div>
+                      </div>
+                    </div>
+                    <!--Grid column-->
 
-      <a href="free/components/card.html" class="btn btn-primary mb-1">Card</a>
-      <a href="free/components/breadcrumb.html" class="btn btn-primary mb-1">Breadcrumb</a>
-      <a href="free/components/collapse.html" class="btn btn-primary mb-1">Collapse</a>
-      <a href="free/components/accordion.html" class="btn btn-primary mb-1">Accordion</a>
-      <a href="free/components/alert.html" class="btn btn-primary mb-1">Alert</a>
-      <a href="free/components/badge.html" class="btn btn-primary mb-1">Badge</a>
-      <a href="free/components/buttons.html" class="btn btn-primary mb-1">Buttons</a>
-      <a href="free/components/buttons-2.html" class="btn btn-primary mb-1">Buttons 2</a>
-      <a href="free/components/button-group.html" class="btn btn-primary mb-1">Button Group</a>
-      <a href="free/components/navs.html" class="btn btn-primary mb-1">Navs</a>
-      <a href="free/components/pagination.html" class="btn btn-primary mb-1">Pagination</a>
-      <a href="free/components/tooltips.html" class="btn btn-primary mb-1">Tooltips</a>
-      <a href="free/components/toasts.html" class="btn btn-primary mb-1">Toasts</a>
-      <a href="free/components/progress.html" class="btn btn-primary mb-1">Progress</a>
-      <a href="free/components/spinners.html" class="btn btn-primary mb-1">Spinners</a>
-      <a href="free/components/popovers.html" class="btn btn-primary mb-1">Popovers</a>
-      <a href="free/components/scrollspy.html" class="btn btn-primary mb-1">Scrollspy</a>
-      <a href="free/components/carousel.html" class="btn btn-primary mb-1">Carousel</a>
-      <a href="free/components/close.html" class="btn btn-primary mb-1">Close</a>
-      <a href="free/components/dropdown.html" class="btn btn-primary mb-1">Dropdown</a>
-      <a href="free/components/list-group.html" class="btn btn-primary mb-1">List group</a>
-      <a href="free/components/modal.html" class="btn btn-primary mb-1">Modal</a>
-      <a href="free/components/navbar.html" class="btn btn-primary mb-1">Navbar</a>
-      <a href="free/components/pills.html" class="btn btn-primary mb-1">Pills</a>
-      <a href="free/components/footer.html" class="btn btn-primary mb-1">Footer</a>
-      <a href="free/components/mega-menu.html" class="btn btn-primary mb-1">Mega Menu</a>
-      <a href="free/components/full-demo.html" class="btn btn-primary mb-1">Full demo</a>
+                    <!--Grid column-->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                      <div class="card">
+                        <div
+                          class="bg-image hover-overlay ripple"
+                          data-mdb-ripple-color="light"
+                        >
+                          <img
+                            src="https://mdbootstrap.com/img/new/standard/nature/111.jpg"
+                            class="img-fluid"
+                          />
+                          <a href="#!">
+                            <div
+                              class="mask"
+                              style="background-color: rgba(251, 251, 251, 0.15)"
+                            ></div>
+                          </a>
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title">算法大汇总</h5>
+                          <p class="card-text">
+                            tuxuanming2024写的算法汇总。
+                          </p>
+                          <a href="https://www.luogu.com.cn/blog/txm2024/suan-fa-da-hui-zong" class="btn btn-primary">前往查看</a>
+                        </div>
+                      </div>
+                    </div>
+                    <!--Grid column-->
 
+                    <!--Grid column-->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                      <div class="card text-center mb-4">
+                        <div class="card-header bg-white">Featured</div>
+                        <div class="card-body">
+                          <h5 class="card-title">Special title treatment</h5>
+                          <p class="card-text">
+                            With supporting text below as a natural lead-in to
+                            additional content.
+                          </p>
+                          <a href="#" class="btn btn-primary">Button</a>
+                        </div>
+                        <div class="card-footer bg-white text-muted">2 days ago</div>
+                      </div>
 
-      <h3 class="mt-5 mb-4">CSS</h3>
-
-      <a href="free/css/typography.html" class="btn btn-primary mb-1">Typography</a>
-      <a href="free/css/icons.html" class="btn btn-primary mb-1">Icons</a>
-      <a href="free/css/shadow.html" class="btn btn-primary mb-1">Shadow</a>
-      <a href="free/css/colors.html" class="btn btn-primary mb-1">Colors</a>
-      <a href="free/components/prism.html" class="btn btn-primary mb-1">Prism</a>
-      <a href="free/components/ripple.html" class="btn btn-primary mb-1">Ripple</a>
-      <a href="free/css/images.html" class="btn btn-primary mb-1">Images</a>
-      <a href="free/css/covers.html" class="btn btn-primary mb-1">Covers</a>
-      <a href="free/css/covers-2.html" class="btn btn-primary mb-1">Covers 2</a>
-      <a href="free/css/hover-effects.html" class="btn btn-primary mb-1">Hover Effects</a>
-
-
-      <h3 class="mt-5 mb-4">Forms</h3>
-
-      <a href="free/forms/form-control.html" class="btn btn-secondary mb-1">Form control</a>
-      <a href="free/forms/form-control-2.html" class="btn btn-secondary mb-1">Form control 2</a>
-      <a href="free/forms/input.html" class="btn btn-secondary mb-1">Input</a>
-      <a href="free/forms/select.html" class="btn btn-secondary mb-1">Select</a>
-      <a href="free/forms/overview.html" class="btn btn-secondary mb-1">Overview</a>
-      <a href="free/forms/form-check.html" class="btn btn-secondary mb-1">Form check</a>
-      <a href="free/forms/form-file.html" class="btn btn-secondary mb-1">Form file</a>
-      <a href="free/forms/form-input-group.html" class="btn btn-secondary mb-1">Form input group</a>
-      <a href="free/forms/layout.html" class="btn btn-secondary mb-1">Form layout</a>
-      <a href="free/forms/validation.html" class="btn btn-secondary mb-1">Validation</a>
-      <a href="free/forms/range.html" class="btn btn-secondary mb-1">Range</a>
-
-
-      <h3 class="mt-5 mb-4">Data</h3>
-
-      <a href="free/data/tables.html" class="btn btn-info mb-1">Tables</a>
-
-
-      <h3 class="mt-5 mb-4">Design Blocks</h3>
-
-      <a href="free/design-blocks/content.html" class="btn btn-danger mb-1">Content</a>
-      <a href="free/design-blocks/call-to-action.html" class="btn btn-danger mb-1">Call to action</a>
-      <a href="free/design-blocks/teams.html" class="btn btn-danger mb-1">Teams</a>
-      <a href="free/design-blocks/testimonials.html" class="btn btn-danger mb-1">Testimonials</a>
-      <a href="free/design-blocks/features.html" class="btn btn-danger mb-1">Features</a>
-      <a href="free/design-blocks/projects.html" class="btn btn-danger mb-1">Projects</a>
-      <a href="free/design-blocks/download.html" class="btn btn-danger mb-1">Download</a>
-      <a href="free/design-blocks/counters.html" class="btn btn-danger mb-1">Counters</a>
-      <a href="free/design-blocks/explore.html" class="btn btn-danger mb-1">Explore</a>
-      <a href="free/design-blocks/faq.html" class="btn btn-danger mb-1">Faq</a>
-      <a href="free/design-blocks/customers.html" class="btn btn-danger mb-1">Customers</a>
-      <a href="free/design-blocks/service.html" class="btn btn-danger mb-1">Service</a>
-
-      <br>
-      <br>
-      <br>
-
-      <a href="free/template/template.html" class="btn btn-success mb-1">Template</a>
-      <a href="free/template/playground-template.html" class="btn btn-success mb-1">Playground template</a>
-
-      <br>
-      <br>
-      <br>
-
-    </div>
-  </div>
-  </body>
-
-  <!-- MDB -->
-  <script type="text/javascript" src="js/mdb.min.js"></script>
-  <!-- Custom scripts -->
-  <script type="text/javascript"></script>
+                      <div class="card mb-3" style="max-width: 540px">
+                        <div class="row g-0">
+                          <div class="col-md-4">
+                            <img
+                              src="https://mdbcdn.b-cdn.net/wp-content/uploads/2020/06/vertical.jpg"
+                              alt="..."
+                              class="img-fluid"
+                            />
+                          </div>
+                          <div class="col-md-8">
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">
+                                This is a wider card with supporting text below as a
+                                natural lead-in to additional content. This content is
+                                a little bit longer.
+                              </p>
+                              <p class="card-text">
+                                <small class="text-muted"
+                                  >Last updated 3 mins ago</small
+                                >
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--Grid column-->
+                  </div>
+                  <!--Grid row-->
+                </section>
+                <!--Section: Cards-->
+                
+                
+                
+                
+                
+                
+            </main>
+            
+            
+            <footer class="bg-dark text-white">
+                <!-- Grid container -->
+                <div class="container p-4">
+                    <!--Grid row-->
+                    <div class="row">
+                        <!--Grid column-->
+                        <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                            <h5 class="text-uppercase">Pixal Online Judge</h5>
+                            
+                            <p>
+                            Material化的小众OJ
+                            </p>
+                        </div>
+                        <!--Grid column-->
+                        
+                        <!--Grid column-->
+                        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                            <h5 class="text-uppercase">服务</h5>
+                            
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="#!" class="text-white">题库</a>
+                                </li>
+                                <li>
+                                    <a href="#!" class="text-white">团队</a>
+                                </li>
+                                <li>
+                                    <a href="#!" class="text-white">博客</a>
+                                </li>
+                                <li>
+                                    <a href="#!" class="text-white">巴蜀文件云</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--Grid column-->
+                        
+                        <!--Grid column-->
+                        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                            <h5 class="text-uppercase">友情链接</h5>
+                            
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="https://www.luogu.com.cn" class="text-white">洛谷</a>
+                                </li>
+                                <li>
+                                    <a href="https://oj.bashu.com.cn" class="text-white">Bashu Online Judge</a>
+                                </li>
+                                <li>
+                                    <a href="https://oj.bashu.com.cn/pub" class="text-white">Bashu Online Judge(pub)</a>
+                                </li>
+                                <li>
+                                    <a href="https://hydro.ac" class="text-white">Hydro Online Judge</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--Grid column-->
+                    </div>
+                    <!--Grid row-->
+                </div>
+                <!-- Grid container -->
+                
+                <!-- Copyright -->
+                <div
+                    class="text-center p-3"
+                    style="
+                  background-color: rgba(0, 0, 0, 0.2);
+                  color: rgba(255, 255, 255, 0.6);
+                "
+                >
+                © 2021 HEXAGON. Powered by MDB.
+                </div>
+                <!-- Copyright -->
+                <div
+                    class="text-right p-0.1"
+                    style="
+                  background-color: rgba(0, 0, 0, 0.2);
+                  color: rgba(255, 255, 255, 0.6);
+                "
+                >
+                PixalOJ Gen3 Developer Edition Version 0.0.0 alpha
+                </div>
+            </footer>
+            <!-- End your project here-->
+            
+            <!-- MDB -->
+            <script type="text/javascript" src="js/mdb.min.js"></script>
+            <!-- Custom scripts -->
+            <script type="text/javascript">
+                function switchdarkmode() {
+                    <link rel="stylesheet" href="css/mdb.min.css" />
+                }
+            </script>
+    </body>
 </html>
